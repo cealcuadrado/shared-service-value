@@ -20,4 +20,13 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  esNivel(nivel: number): boolean {
+    return (this.nivel == nivel);
+  }
+
+  setearNivel(nivel: number): void {
+    this.nivel = nivel;
+    this.navbarService.setearNivelTamannio(nivel);
+  }
+
 }

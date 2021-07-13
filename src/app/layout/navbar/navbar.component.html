@@ -12,6 +12,17 @@
     </div>
   </div>
   <span class="navbar-text">
-    Nivel: {{nivel}}
+    Nivel: {{nivel}} | Cambiar nivel: 
+    <div class="btn-group">
+      <button class="btn btn-primary" [ngClass]="{'active':esNivel(1)}" (click)="setearNivel(1)">
+        1
+      </button>
+      <button class="btn btn-primary" [ngClass]="{'active':esNivel(2)}" (click)="setearNivel(2)">
+        2
+      </button>
+      <button class="btn btn-primary" [ngClass]="{'active':esNivel(3)}" (click)="setearNivel(3)">
+        3
+      </button>
+    </div>
   </span>
 </nav>
