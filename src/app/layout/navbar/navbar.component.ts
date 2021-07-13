@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarService } from './navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  nivel = 1;
+
+  constructor(
+    private navbarService: NavbarService
+  ) { }
 
   ngOnInit(): void {
+    this.navbarService.obtenerNivelTamannio().subscribe(nivel => {
+      this.nivel = nivel;
+    });
   }
 
 }
