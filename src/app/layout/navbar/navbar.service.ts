@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavbarService {
+  private nivelTamannio = new BehaviorSubject<number>(1);
 
-  private nivelTamannio = new Subject<number>();
-
-  constructor() { }
+  constructor() {
+  }
 
   public setearNivelTamannio(nivel: number) {
     this.nivelTamannio.next(nivel);

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooComponent implements OnInit {
 
-  nivel = 1;
+  nivel: number;
 
   constructor(
     private navbarService: NavbarService

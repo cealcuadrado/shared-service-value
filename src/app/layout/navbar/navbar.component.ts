@@ -15,9 +15,7 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.navbarService.obtenerNivelTamannio().subscribe(nivel => {
-      this.nivel = nivel;
-    });
+    this.navbarService.setearNivelTamannio(this.nivel);
   }
 
   esNivel(nivel: number): boolean {
